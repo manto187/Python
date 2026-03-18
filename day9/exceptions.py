@@ -22,3 +22,9 @@ except ZeroDivisionError:
     print("cannot divide by zero")
 except:
     print("something went wrong")   
+
+# you can create your own exceptions using raise keyword...
+age = int(input("enter your age: "))
+
+if age < 18:
+    raise Exception("you are not allowed")
