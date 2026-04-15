@@ -12,3 +12,7 @@ print(sqrt(25))
 
 import math as m 
 print(m.pi)
+
+# imported custom module
+import custom_module
+print(custom_module.greet("mantoo"))
