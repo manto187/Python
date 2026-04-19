@@ -68,3 +68,28 @@ mycolors = ["black", "hotpink", "b", "#4CAF50"]
 
 plt.pie(y, labels = mylabels, colors = mycolors)
 plt.show()
+
+
+# adding list of explanations to each wedge
+
+import matplotlib.pyplot as plt 
+import numpy as np 
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["apples", "bananas", "cherries", "dates"]
+
+plt.pie(y, labels = mylabels)
+plt.legend()
+plt.show()
+
+
+# legend with the header
+import matplotlib.pyplot as plt 
+import numpy as np 
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["apples", "bananas", "cherries", "dates"]
+
+plt.pie(y, labels = mylabels)
+plt.legend(title = "four fruits")
+plt.show()
