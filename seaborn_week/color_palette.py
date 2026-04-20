@@ -27,3 +27,44 @@ import seaborn as sns
 
 sns.palplot(sns.color_palette("terrain_r", 7))
 plt.show()
+
+# examples understanding 
+
+import pandas as pd 
+import seaborn as sns 
+
+sns.palplot(sns.color_palette("muted", 10))
+plt.show()
+
+
+import pandas as pd 
+import seaborn as sns 
+
+sns.palplot(sns.color_palette("bright", 10))
+plt.show()
+
+
+
+import pandas as pd 
+import seaborn as sns 
+
+sns.palplot(sns.color_palette("dark", 10))
+plt.show()
+
+
+
+import pandas as pd 
+import seaborn as sns 
+
+sns.palplot(sns.color_palette("BuGn_r", 10))
+plt.show()
+
+
+
+import pandas as pd 
+import seaborn as sns 
+
+color = ["green", "white", "red", "yellow", "green", "grey"]
+sns.set_palette(color)
+sns.palplot(sns.color_palette())
+plt.show()
