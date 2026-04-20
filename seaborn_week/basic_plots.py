@@ -28,3 +28,35 @@ tips = sns.load_dataset("tips")
 
 sns.barplot(x="day", y="total_bill", data=tips)
 plt.show()
+
+
+# boxplot
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+
+sns.boxplot(x="day", y="total_bill", data=tips)
+plt.show()
+
+
+# histoplast
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+
+sns.histplot(tips["total_bill"], kde=True)
+plt.show()
+
+
+# heatmap
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+corr = tips.corr(numeric_only=True)
+
+sns.heatmap(corr, annot=True, cmap="coolwarm")
+plt.show()
