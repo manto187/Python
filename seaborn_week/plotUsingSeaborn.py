@@ -36,3 +36,29 @@ tips = sns.load_dataset("tips")
 sns.countplot(x="sex", data=tips)
 plt.title("count of gender in dataset")
 plt.show()
+
+
+# box plot 
+
+tips = sns.load_dataset("tips")
+
+sns.boxplot(x="day", y="total_bill", data=tips, hue="smoker")
+plt.title("total bill distribution by day and smokign status")
+plt.show()
+
+
+# violin plot 
+
+tips = sns.load_dataset("tips")
+
+sns.violinplot(x="day", y="total_bill", data=tips, hue="sex", split=True)
+plt.title("violin plot of total bill by day and gender")
+plt.show()
+
+# stripe plot with hur
+
+tips = sns.load_dataset("tips")
+
+sns.stripplot(x="day", y="total_bill", data=tips, jitter=True, hue="smoker", dodge=True)
+plt.title("stripe plot of total bill by day and smoker")
+plt.show()
