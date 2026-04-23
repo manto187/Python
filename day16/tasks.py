@@ -19,3 +19,15 @@ with open("student.json", "r") as file:
 
 print("name:", data["name"])
 print("marks:", data["marks"])
+
+
+# task 3 adding new field
+
+import json 
+
+with open("student.json", "r") as file:
+    data = json.load(file)
+
+data["grade"] = "A"
+with open("student.json", "w") as file:
+    json.dump(data, file, indent=4)
