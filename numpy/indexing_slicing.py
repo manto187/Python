@@ -58,3 +58,10 @@ import numpy as np
 arr = np.array([10, 20, 30, 40, 50])
 
 print(arr[(arr>20) & (arr<50)])
+
+
+# 5. fancy indexing
+import numpy as np 
+arr = np.array([10, 20, 30, 40, 50])
+indices = [0, 2, 4]
+print(arr[indices])
