@@ -18,3 +18,16 @@ print("one array: ", "\n", a1)
 print("constant array: ", "\n", af)
 print("range array: ", "\n", ar)
 print("linspace array: ", "\n", la)
+
+
+
+# arrays using random number generation...
+import numpy as np 
+
+ar = np.random.rand(2, 3)
+an = np.random.randn(2, 2)
+ai = np.random.randint(1, 10, size=(2,3))
+
+print(ar)
+print(an)
+print(ai)
