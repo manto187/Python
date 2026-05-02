@@ -31,3 +31,18 @@ ai = np.random.randint(1, 10, size=(2,3))
 print(ar)
 print(an)
 print(ai)
+
+
+
+# creating arrays using matrix creating routines
+import numpy as np 
+
+im = np.eye(3)
+da = np.diag([1, 2, 3])
+a0 = np.zeros_like(da)
+a1 = np.ones_like(da)
+
+print(im)
+print(da)
+print(a0)
+print(a1)
