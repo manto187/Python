@@ -42,3 +42,19 @@ import numpy as np
 matrix = np.array([[1,2,3], [4,5,6], [7,8,9]])
 
 print(matrix[0:2, 1:3])
+
+
+# 4.Bolean indexing
+
+import numpy as np 
+
+arr = np.array([10, 15, 20, 25, 30])
+
+print(arr[arr>20])
+
+# using logical operators with boolean indexing
+import numpy as np 
+
+arr = np.array([10, 20, 30, 40, 50])
+
+print(arr[(arr>20) & (arr<50)])
