@@ -25,3 +25,20 @@ cube = np.array([[[1, 2, 3],
                   [16, 17, 18]]])
 
 print(cube[1,2,0])
+
+
+# 3. slicing arrays 
+
+# slicing 1D arrays 
+import numpy as np 
+
+arr = np.array([0,1,2,3,4,5])
+
+print(arr[1:4])
+
+# slicing multidimensional arrays
+import numpy as np 
+
+matrix = np.array([[1,2,3], [4,5,6], [7,8,9]])
+
+print(matrix[0:2, 1:3])
