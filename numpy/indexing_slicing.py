@@ -129,5 +129,18 @@ print(res)
 
 
 
+# accessing middle rows in 3D array
+import numpy as np 
+arr = np.array([[[1,2,3], [4,5,6], [7,8,9], [1,2,3], [4,5,6], [7,8,9]]])
+print("array: " )
+print(arr)
+
+res = arr[:, [1]]
+print("accessed rows: ")
+print(res)
+
+
+
+
 
 
