@@ -105,3 +105,17 @@ print("accessed rows: ")
 print(res)
 
 
+
+import numpy as np 
+arr = np.array([[10,20,30], [40,50,60], [60,70,80]])
+print(arr)
+print("array: ")
+
+res = arr[[1]]
+print("accessed rows: ")
+print(res)
+
+
+
+
+
