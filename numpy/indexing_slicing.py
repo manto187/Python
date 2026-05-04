@@ -115,6 +115,18 @@ res = arr[[1]]
 print("accessed rows: ")
 print(res)
 
+# accessing specific rows and columns of 2D array
+import numpy as np 
+arr = np.array([[10,20,30],
+                [40,50,60],
+                [60,70,80]])
+print("array: " )
+print(arr)
+
+res = arr[:2, :2]
+print("accessed rows and columns: ")
+print(res)
+
 
 
 
