@@ -139,6 +139,28 @@ res = arr[:, [1]]
 print("accessed rows: ")
 print(res)
 
+# accessing first and last row of 3D array
+
+import numpy as np 
+arr = np.array([[[1,2,3], [4,5,6], [7,8,9], [1,2,3], [4,5,6], [7,8,9]]])
+print("array: " )
+print(arr)
+
+res = arr[:, [0, 2]]
+print("accessed rows and columns: ")
+print(res)
+
+
+# accessing specific row and column in 3D array
+import numpy as np 
+arr = np.array([[[1,2,3], [4,5,6], [7,8,9], [1,2,3], [4,5,6], [7,8,9]]])
+print("array: " )
+print(arr)
+
+res = arr[:,:2, :2]
+print("accessed rows and columns: ")
+print(res)
+
 
 
 
