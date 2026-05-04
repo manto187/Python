@@ -92,3 +92,16 @@ arr = np.array([1,2,3,4])
 arr[1:3] = 99
 print(arr)
 
+
+
+# accessing first and last row of 2D array
+import numpy as np 
+arr = np.array([[10,20,30], [40,50,60], [60,70,80]])
+print(arr)
+print("array: ")
+
+res = arr[[0,2]]
+print("accessed rows: ")
+print(res)
+
+
