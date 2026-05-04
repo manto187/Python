@@ -65,3 +65,17 @@ import numpy as np
 arr = np.array([10, 20, 30, 40, 50])
 indices = [0, 2, 4]
 print(arr[indices])
+
+
+# integer array indexing 
+import numpy as np 
+arr = np.array([1,2,3,4,5])
+print(arr[[0,2,4]])
+
+
+# 7. ellipses in indexing 
+
+import numpy as np 
+cube = np.random.rand(4,4,4)
+print(cube[..., 0])
+
