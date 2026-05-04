@@ -79,3 +79,16 @@ import numpy as np
 cube = np.random.rand(4,4,4)
 print(cube[..., 0])
 
+
+# np.newaxis to add new dimensions
+
+import numpy as np 
+arr = np.array([1,2,3])
+print(arr[:, np.newaxis])
+
+# modifying array elements
+import numpy as np 
+arr = np.array([1,2,3,4])
+arr[1:3] = 99
+print(arr)
+
