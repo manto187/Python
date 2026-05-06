@@ -49,3 +49,18 @@ import numpy as np
 arr = np.array([1,2,3,4,5,6])
 result = np.array_split(arr, 3)
 print(result)
+
+
+# splitting methods.
+# 1. numpy.split() to divide array into equal-sized subarrays
+import numpy as np 
+arr = np.array(6)
+result = np.split(arr, 2)
+print(result)
+
+# 2. numpy.array_split() 
+import numpy as np 
+arr = np.array(13)
+result = np.array_split(arr, 4)
+print(result)
+
