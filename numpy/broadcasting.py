@@ -32,3 +32,14 @@ m = np.array([[1,2], [3,4]])
 v = np.array([10, 20])
 result = m * v
 print(result)
+
+
+# scaling data with broadcasting
+import numpy as np 
+fd = np.array([[0.8, 2.9, 3.9],
+               [52.4, 23.6, 36.5],
+               [55.2, 31.7, 23.9],
+               [14.4, 11.0, 4.9]])
+cpg = np.array([9,4,4])
+result = fd / cpg
+print(result)
