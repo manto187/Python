@@ -54,3 +54,16 @@ temp = np.array([[30, 32, 34, 33, 31],
 corr = np.array([1.5, -0.5, 2.0])
 res = temp+corr[:, None]
 print(res)
+
+
+
+# normalizing image data 
+import numpy as np 
+img = np.array([[[100, 120, 130],
+                 [90, 110, 140],
+                 [80, 100, 120]]])
+
+m = img.mean(axis = 0)
+s = img.std(axis = 0)
+res = (img - m) /s
+print(res)
