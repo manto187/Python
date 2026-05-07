@@ -67,3 +67,13 @@ m = img.mean(axis = 0)
 s = img.std(axis = 0)
 res = (img - m) /s
 print(res)
+
+# centering data in machine learning
+import numpy as np 
+data = np.array([[10, 20],
+                 [15, 25],
+                 [20, 30]])
+
+m = data.mean(axis = 0)
+res = data - m
+print(res)
