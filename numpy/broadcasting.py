@@ -43,3 +43,14 @@ fd = np.array([[0.8, 2.9, 3.9],
 cpg = np.array([9,4,4])
 result = fd / cpg
 print(result)
+
+
+# adjusting temprature data across multiple locations 
+import numpy as np 
+temp = np.array([[30, 32, 34, 33, 31],
+                 [25, 27, 29, 28, 26],
+                 [20, 22, 24, 23, 21]])
+
+corr = np.array([1.5, -0.5, 2.0])
+res = temp+corr[:, None]
+print(res)
