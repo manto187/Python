@@ -39,3 +39,22 @@ print("variance: ", np.var(weights))
 
 # average
 print("average: ", np.average(weights))
+
+
+
+# basic bitwise operations on arrays of integers 
+import numpy as np 
+even = np.array([0, 2, 4, 6, 8, 16, 32])
+odd = np.array([1, 3, 5, 7, 9, 17, 33])
+
+# bitwise AND, OR, XOR 
+print("AND: ", np.bitwise_and(even, odd))
+print("OR: ", np.bitwise_or(even, odd))
+print("XOR: ", np.bitwise_xor(even, odd))
+
+# bitwise NOT
+print("invert: ", np.invert(even))
+
+# bit shifts
+print("left shifts: ", np.left_shift(even, 1))
+print("right shift: ", np.right_shift(even, 1))
