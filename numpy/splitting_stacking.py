@@ -64,3 +64,22 @@ arr = np.array(13)
 result = np.array_split(arr, 4)
 print(result)
 
+# 3. numpy.vsplit()
+import numpy as np 
+arr = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+result = np.vsplit(arr, 2)
+print(result)
+
+# 4. numpy.hsplit()
+import numpy as np
+
+arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+result = np.hsplit(arr, 2)
+print(result)
+
+# 5. numpy.dsplit()
+import numpy as np
+
+arr = np.arange(24).reshape((2,3,4))
+result = np.dsplit(arr, 2)
+print(result)
