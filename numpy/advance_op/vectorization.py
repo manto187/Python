@@ -11,3 +11,17 @@ a1 = np.array([1,2,3])
 a2 = np.array([4,5,6])
 result = a1+a2
 print(result)
+
+
+# element-wise scalar multiplication
+import numpy as np 
+a1 = np.array([1,2,3,4])
+result = a1*2
+print(result)
+
+
+# logical operations on arrays
+import numpy as np 
+a1 = np.array([10,20,30])
+result = a1>15
+print(result)
