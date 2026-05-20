@@ -51,3 +51,22 @@ r1 = a1.sum()
 r2 = a1.mean()
 print(r1)
 print(r2)
+
+# performance comparison: loop vs vectorization
+
+import numpy as np 
+import time 
+arr = np.arange(1_000_000)
+
+# loop 
+t1 = time.time()
+loop_res = [x*2 for x in arr]
+t2 = time.time()
+
+# vectorized
+t3 = time.time()
+vec_res = arr*2
+t4 = time.time()
+
+print("loop time:", t2-t1)
+print("vectorized time:", t4-t3)
