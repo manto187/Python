@@ -25,3 +25,12 @@ import numpy as np
 a1 = np.array([10,20,30])
 result = a1>15
 print(result)
+
+
+# matrix operations using vectorization
+import numpy as np 
+a1 = np.array([[1,2], [3,4]])
+a2 = np.array([[5,6], [7,8]])
+
+result = np.dot(a1, a2)
+print(result)
