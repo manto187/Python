@@ -34,3 +34,11 @@ a2 = np.array([[5,6], [7,8]])
 
 result = np.dot(a1, a2)
 print(result)
+
+
+# applying custom functions using np.vectorize()
+import numpy as np 
+a1 = np.array([1,2,3,4])
+vec = np.vectorize(lambda x: x**2+2*x+1)
+result = vec(a1)
+print(result)
