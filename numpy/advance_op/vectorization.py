@@ -42,3 +42,12 @@ a1 = np.array([1,2,3,4])
 vec = np.vectorize(lambda x: x**2+2*x+1)
 result = vec(a1)
 print(result)
+
+
+# vector aggregation operations
+import numpy as np 
+a1 = np.array([1,2,3])
+r1 = a1.sum()
+r2 = a1.mean()
+print(r1)
+print(r2)
