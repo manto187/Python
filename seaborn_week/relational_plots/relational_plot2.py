@@ -40,3 +40,14 @@ sns.relplot(x="total_bill",
             data=tips)
 
 
+# passing data vectors instead of names in a data frame
+import seaborn as sns 
+iris = sns.load_dataset('iris')
+sns.scatterplot(x=iris.sepal_length,
+                y=iris.sepal_width,
+                hue=iris.species,
+                style=iris.species)
+
+
+
+
