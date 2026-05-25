@@ -36,3 +36,17 @@ sns.relplot(x="total_bill",
             col="time",
             row="sex",
             data=tips)
+
+
+# using size attribute, we can see data points having different size 
+import seaborn as sns
+
+sns.set(style ="ticks")
+
+tips = sns.load_dataset('tips')
+
+sns.relplot(x="total_bill", 
+            y="tip",
+            hue="day",
+            size="size",
+            data=tips)
