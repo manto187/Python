@@ -59,15 +59,26 @@ sns.lineplot(x="timepoint",
              y="signal",
              data=fmri)
 
+
+# grouping data points on the basis of category here as region and event
 import seaborn as sns
 
 
 sns.set(style = 'whitegrid')
 fmri = sns.load_dataset("fmri")
-
 sns.lineplot(x ="timepoint",
              y ="signal",
              hue ="region",
              style ="event",
              data = fmri)
 
+
+# complex plot visualizing "dots" dataset to show the power of seaborn
+import seaborn as sns
+sns.set(style='whitegrid')
+dots = sns.load_dataset("dots").query("align=='dots' ")
+sns.lineplot(x="time",
+             y="firing_rate",
+             hue="coherence",
+             style="choice",
+             data=dots)
