@@ -10,7 +10,7 @@ plt.show()
 
 # example 2 
 import seaborn as sns 
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
 
 data = sns.load_dataset("mpg")
 sns.jointplot(x="mpg", y="acceleration", 
@@ -20,7 +20,7 @@ plt.show()
 
 # example 3 
 import seaborn as sns 
-import matplotlib as plt 
+import matplotlib.pyplot as plt 
 data = sns.load_dataset("exercise")
 
 sns.jointplot(x="id", y="pulse", 

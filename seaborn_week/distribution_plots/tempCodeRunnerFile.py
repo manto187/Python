@@ -1,9 +1,7 @@
-# example 1
 import seaborn as sns 
 import matplotlib.pyplot as plt 
 
-data = sns.load_dataset("attention")
-
-sns.jointplot(x="solutions", y="score", 
-              kind = "hex", data = data)
+data = sns.load_dataset("mpg")
+sns.jointplot(x="mpg", y="acceleration", 
+              kind = "scatter", data = data)
 plt.show()
