@@ -1,7 +1,7 @@
 import seaborn as sns 
 import matplotlib.pyplot as plt 
+data = sns.load_dataset("exercise")
 
-data = sns.load_dataset("mpg")
-sns.jointplot(x="mpg", y="acceleration", 
-              kind = "scatter", data = data)
+sns.jointplot(x="id", y="pulse", 
+              kind = "kde", data = data)
 plt.show()
