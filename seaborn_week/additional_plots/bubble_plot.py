@@ -16,3 +16,17 @@ sns.scatterplot(x="sepal.length",
 
 plt.xlabel("Sepal.Length")
 plt.ylabel("sepal.width")
+
+# bubble plot with seaborn scatterplot()
+sns.set_contex("talk", font_scale=1.1)
+plt.figure(figsize=(10,6))
+sns.scatterplot(x="petal.length",
+                y="petal.width",
+                data=df)
+
+plt.legend(bbox_to_anchor=(1.01, 1), borderaxespad=0)
+plt.xlabel("petal.length")
+plt.ylabel("petal.width")
+plt.tight_layout()
+plt.savefig("Bubble_plot_Seaborn_scatterplot.png",
+            format='png', dpi=150)
