@@ -38,4 +38,18 @@ df = sns.load_dataset("tips")
 sns.boxplot(x="day", y="tips", data=df, linewidth=2)
 plt.show()
 
-# 
+# example 5 
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = sns.load_dataset("tips")
+sns.boxplot(data=df[["total_bill", "tips", "size"]], orient="h")
+plt.show()
+
+# example 6 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
+df = sns.load_dataset("tips")
+sns.boxplot(x="day", y="tips", data=df, color="green")
+plt.show()
