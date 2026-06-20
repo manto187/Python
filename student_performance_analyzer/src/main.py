@@ -96,3 +96,20 @@ sns.heatmap(
 
 plt.title("correlation heatmap")
 plt.show()
+
+# topper 
+topper = df.loc[
+    df['FinalScore'].idxmax()
+]
+print("\nTop Students: ")
+print(topper)
+
+# save report 
+df.to_csv(
+    "student_performance_report.csv",
+    index=False
+)
+
+print(
+    "\nReport saved as student_performance_report.csv"
+)
