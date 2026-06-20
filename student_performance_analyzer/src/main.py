@@ -29,3 +29,29 @@ print(np.min(scores))
 
 print("\nStandard Deviation: ")
 print(np.std(scores))
+
+# performance category 
+def category(score):
+    if score >=85:
+        return "excellent"
+    elif score >=70:
+        return "good"
+    else:
+        return "needs improvement"
+df['Performance'] = df['FinalScore'].apply(category)
+
+print("\nperformance categories: ")
+print(df[['Name', 'Performance']])
+
+# ranking 
+df['Rank'] = df['FinalScore'].rank(
+    ascending=False,
+    method='dense'
+)
+
+print("\nStudent Rankings: ")
+print(
+    df[['Name',
+        'FinalScore',
+        'Rank']]
+)
