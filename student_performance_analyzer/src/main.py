@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 
 # load dataset
-df = pd.read_csv("data/students.csv")
+df = pd.read_csv("data/student.csv")
 print("\nDataset: ")
 print(df)
 
@@ -55,3 +55,44 @@ print(
         'FinalScore',
         'Rank']]
 )
+
+# correlation 
+print("\nCorrelation matrix: ")
+print(df.corr(numeric_only=True))
+
+# visualization 1 
+plt.figure(figsize=(8,5))
+sns.barplot(
+    x='Name',
+    y='FinalScore',
+    data=df
+)
+plt.title("Student Scores")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+# visualization 
+plt.figure(figsize=(8,5))
+sns.scatterplot(
+    x='StudyHours',
+    y='FinalScore',
+    data=df,
+    s=100
+)
+plt.title(
+    "Study Hours vs Final Score"
+)
+plt.show()
+
+
+# visualization 3 
+plt.figure(figsize=(8,5))
+sns.heatmap(
+    df.corr(numeric_only=True),
+    annot=True,
+    cmap='coolwarm'
+)
+
+plt.title("correlation heatmap")
+plt.show()
