@@ -16,6 +16,21 @@ def pause():
     input("\npress enter to continue...")
 
 
+def revenue_by_product():
+    plt.figure(figsize=(10,5))
+    plt.bar(df["product"],df["total sales"])
+    plt.title("revenue by product")
+    plt.xlabel("product")
+    plt.ylabel("revenue")
+    plt.xticks(rotation=45)
+    plt.tight_layout()
+    plt.show()
+
+def sales_distribution_pie():
+    plt.figure(figsize=(6,6))
+    plt.pie(category_sales.values, labels=category_sales.index, autopct="%1.1f")``
+    plt.title("sales distribution by category")
+    plt.show()
 
 def graph_menu():
     while True:
