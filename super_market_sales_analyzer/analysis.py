@@ -32,6 +32,21 @@ def sales_distribution_pie():
     plt.title("sales distribution by category")
     plt.show()
 
+def price_histogram():
+    plt.figure(figsize=(8,5))
+    plt.hist(df["price"], bins=6)
+    plt.title("product price distribution")
+    plt.xlabel("price")
+    plt.ylabel("frequency")
+    plt.show()
+
+def box_plot():
+    plt.figure(figsize=(6,5))
+    sns.boxplot(y=df["total sales"])
+    plt.title("sales distribution")
+    plt.show()
+
+    
 def graph_menu():
     while True:
         print("\n-----Graph Menu-----")
