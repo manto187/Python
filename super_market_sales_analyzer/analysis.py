@@ -40,13 +40,13 @@ def price_histogram():
     plt.ylabel("frequency")
     plt.show()
 
-def box_plot():
+def sales_box_plot():
     plt.figure(figsize=(6,5))
     sns.boxplot(y=df["total sales"])
     plt.title("sales distribution")
     plt.show()
 
-def heatmap():
+def correlation_heatmap():
     plt.figure(figsize=(6,4))
     sns.heatmap(df.select_dtypes(include="number").corr(), annot=True, cmap="Blues")
     plt.title("correlation heatmap")
@@ -87,3 +87,28 @@ def graph_menu():
         elif ch=="7":
             break
         else: print("invalid choice")
+
+while True:
+    print("\n--------- SUPERMARKET SALES ANALYZER ---------")
+    print("1. view dataset")
+    print("2. view statistics")
+    print("3. highest and lowest selling products")
+    print("4. category wise sales")
+    print("5. save reports")
+    print("6. view graphs")
+    print("7. exit")
+    choice=print("enter your choice: ")
+
+    if choice=="1":
+        print(df)
+        pause()
+    elif choice=="2":
+        print(f"total revenue: {np.sum(sales)}")
+        print(f"average revenue: {np.mean(sales):.2f}")
+        print(f"maximum sales: {np.max(sales)}")
+        print(f"minimum sales: {np.min(sales)}")
+        print(f"median sales: {np.median(sales)}")
+        print(f"standard deviation: {np.std(sales):.2f}")
+        pause()
+
+    
