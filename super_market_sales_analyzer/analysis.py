@@ -46,7 +46,20 @@ def box_plot():
     plt.title("sales distribution")
     plt.show()
 
+def heatmap():
+    plt.figure(figsize=(6,4))
+    sns.heatmap(df.select_dtypes(include="number").corr(), annot=True, cmap="Blues")
+    plt.title("correlation heatmap")
+    plt.show()
     
+def category_revenue():
+    plt.figure(figsize=(8,5))
+    sns.barplot(x=category_sales.index, y=category_sales.values)
+    plt.title("revenue by category")
+    plt.xlabel("category")
+    plt.ylabel("revenue")
+    plt.show()
+
 def graph_menu():
     while True:
         print("\n-----Graph Menu-----")
