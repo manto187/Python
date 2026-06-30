@@ -110,5 +110,22 @@ while True:
         print(f"median sales: {np.median(sales)}")
         print(f"standard deviation: {np.std(sales):.2f}")
         pause()
-
+    elif choice=="3":
+        print("\nhighest selling product:\n", highest)
+        print("\nlowest selling product:\n", lowest)
+        pause()
+    elif choice=="4":
+        print(category_sales)
+        pause()
+    elif choice=="5":
+        df.to_csv("sales.csv", index=False)
+        print("sales report saved successfully.")
+        pause()
+    elif choice=="6":
+        graph_menu()
+    elif choice=="7":
+        print("goodbye!")
+        break
+    else:
+        print("invalid choice")
     
