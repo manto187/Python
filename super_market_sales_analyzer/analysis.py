@@ -28,7 +28,7 @@ def revenue_by_product():
 
 def sales_distribution_pie():
     plt.figure(figsize=(6,6))
-    plt.pie(category_sales.values, labels=category_sales.index, autopct="%1.1f")``
+    plt.pie(category_sales.values, labels=category_sales.index, autopct="%1.1f%%",startangle=90)
     plt.title("sales distribution by category")
     plt.show()
 
@@ -97,7 +97,7 @@ while True:
     print("5. save reports")
     print("6. view graphs")
     print("7. exit")
-    choice=print("enter your choice: ")
+    choice=input("enter your choice: ")
 
     if choice=="1":
         print(df)
