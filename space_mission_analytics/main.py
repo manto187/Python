@@ -238,3 +238,33 @@ df = pd.DataFrame({
 
     "Revenue_USD": revenue
 })
+
+
+print("\n--------- FIRST 10 MISSIONS ---------")
+print(df.head(10))
+
+print("\n--------- DATASET INFORMATION ---------")
+print(df.info())
+
+print("\n--------- RANDOM 5 MISSIONS ---------\n")
+print(df.sample(5))
+
+print("\n--------- DATASET SHAPE -----------\n")
+
+print(df.shape)
+
+print("\nRows :", df.shape[0])
+print("Columns :", df.shape[1])
+
+
+
+df.to_csv(
+    "data/space_missions.csv",
+    index=False
+)
+
+print("\n-------------------------------")
+print("Dataset Generated Successfully!")
+print("Location : data/space_missions.csv")
+print("Total Missions :", TOTAL_MISSIONS)
+print("---------------------------------")
