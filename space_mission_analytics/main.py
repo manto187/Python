@@ -196,3 +196,45 @@ launch_day = np.random.randint(
     29,
     TOTAL_MISSIONS
 )
+
+df = pd.DataFrame({
+    "Mission ID": mission_ids,
+
+    "Launch_Year": years,
+
+    "Launch_Month": launch_month,
+
+    "Launch_Day": launch_day,
+
+    "Country": countries_data,
+
+    "Agency": agencies_data,
+
+    "Rocket": rockets_data,
+
+    "Launch_Site": launch_sites_data,
+
+    "Payload_kg": payload,
+
+    "Launch_Cost_USD": launch_cost,
+
+    "Fuel_Used_Tons": fuel,
+
+    "Mission_Duration_Days": mission_duration,
+
+    "Delay_Days": delay,
+
+    "Crew_Size": crew_size,
+
+    "Weather": weather,
+
+    "Orbit_Type": orbit,
+
+    "Satellite_Type": satellite,
+
+    "Mission_Status": mission_status,
+
+    "Failure_Reason": failure_reason,
+
+    "Revenue_USD": revenue
+})
