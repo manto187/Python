@@ -40,3 +40,39 @@ print("\n8. missing values\n")
 missing = df.isnull().sum()
 print(missing)
 print("\ntotal missing values :", missing.sum())
+
+# duplicates 
+print("\n9. duplicates records\n")
+duplicates = df.duplicated().sum()
+print("duplicate rows :", duplicates)
+
+
+# summary statistics
+print("\n10. summary statistics\n")
+print(df.describe())
+print("\n11. categorical summary\n")
+print(df.describe(include='object'))
+
+
+# unique values
+print("\n12. unique values per column\n")
+
+for column in df.columns:
+    print(f"{column} : {df[column].nunique()}")
+
+
+# value counts
+print("\n13. country distribution\n")
+print(df["country"].value_counts())
+
+print("\n14. agency distribution\n")
+print(df["Agency"].value_counts())
+
+print("\n15. rocket distribution\n")
+print(df["Rocket"].value_counts())
+
+print("\n16. weather distribution\n")
+print(df["Weather"].value_counts())
+
+print("\n17. mission status\n")
+print(df["Mission_Status"].value_counts())
