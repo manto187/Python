@@ -76,3 +76,15 @@ print(df["Weather"].value_counts())
 
 print("\n17. mission status\n")
 print(df["Mission_Status"].value_counts())
+
+
+# success rate
+
+success_rate = (
+    df["Mission_Status"]
+    .value_counts(normalize=True)
+    *100
+)
+
+print("\n18. success rate (%)\n")
+print(success_rate)
