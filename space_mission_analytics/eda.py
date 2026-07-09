@@ -88,3 +88,26 @@ success_rate = (
 
 print("\n18. success rate (%)\n")
 print(success_rate)
+
+
+# numerical analysis
+numerical_columns = [
+    "Payload_kg",
+    "Launch_Cost_USD",
+    "Fuel_Used_Tons",
+    "Mission_Duration_Days",
+    "Delay_Days",
+    "Crew_Size",
+    "Revenue_USD"
+]
+
+print("\n19. numerical analysis\n")
+for column in numerical_columns:
+    print("="*60)
+    print(column)
+    print("="*60)
+    print("minimum: ", df[column].min())
+    print("maximum: ", df[column].max())
+    print("mean: ", round(df[column].mean(), 2))
+    print("median: ", round(df[column].median(), 2))
+    print("std dev: ", round(df[column].std(), 2))
