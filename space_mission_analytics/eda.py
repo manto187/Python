@@ -128,4 +128,12 @@ for column in numerical_columns:
     print(f"{column}")
     print("outliers :", len(outliers))
     print()
+
+
+# memory usage
+memory = df.memory_usage(deep=True).sum() / 1024**2
+
+print("\n21. memory usage\n")
+
+print(round(memory,2),"MB")
    
