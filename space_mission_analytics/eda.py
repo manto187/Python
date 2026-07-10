@@ -111,3 +111,21 @@ for column in numerical_columns:
     print("mean: ", round(df[column].mean(), 2))
     print("median: ", round(df[column].median(), 2))
     print("std dev: ", round(df[column].std(), 2))
+
+# outlier detection using IQR method
+print("\n20. outlier detection (IQR METHOD)\n")
+
+for column in numerical_columns:
+    Q1 = df[column].quantile(0.25)
+    Q3 = df[column].quantile(0.75)
+    IQR = Q3 - Q1
+    lower = Q1 - 1.5 * IQR
+    upper = Q3 + 1.5 * IQR
+    outliers = df[
+        (df[column] < lower) |
+        (df[column] > upper)
+    ]
+    print(f"{column}")
+    print("outliers :", len(outliers))
+    print()
+   
