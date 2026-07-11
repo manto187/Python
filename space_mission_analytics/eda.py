@@ -137,3 +137,12 @@ print("\n21. memory usage\n")
 
 print(round(memory,2),"MB")
    
+# save clean dataset 
+os.makedirs("output", exist_ok=True)
+df.to_csv(
+    "output/clean_data.csv",
+    index=False
+    )
+print("\nclean dataset saved successfully")
+print("\n location: output/clean_space_missions.csv")
+print("\nstep 2 completed successfully")
