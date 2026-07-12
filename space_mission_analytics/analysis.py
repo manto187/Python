@@ -141,3 +141,23 @@ print(
         ]
     ].head(10)
 )
+
+#  top 10 highest revenue missions 
+print("\n22. top 10 highest revenue missions")
+print("-"*50)
+
+top_cost = df.sort_values(
+    by="revenue_usd",
+    ascending=False
+)
+
+print(
+    top_cost[
+        [
+            "mission_ID",
+            "country",
+            "agency",
+            "revenue_usd"
+        ]
+    ].head(10)
+)
