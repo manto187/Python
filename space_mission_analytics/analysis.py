@@ -35,3 +35,88 @@ failure_rate = (len(failure)/len(df))*100
 print("\n5. failure rate")
 print("-" * 50)
 print(f"{failure_rate:.2f}%")
+
+# mission by country 
+print("\n6. missions by country")
+print("-"*50)
+country_missions = df.groupby("Country").size()
+print(country_missions.sort_values(ascending=False))
+
+# mission by agency 
+print("\n7. missions by agency")
+print("-"*50)
+agency_missions = df.groupby("Agency").size()
+print(agency_missions.sort_values(ascending=False))
+
+# mission by rocket 
+print("\n8. missions by rocket")
+print("-"*50)
+rocket_missions = df.groupby("Rocket").size()
+print(rocket_missions.sort_values(ascending=False))
+
+# mission by launch site 
+print("\n9. missions by launch site")
+print("-"*50)
+launch_site_missions = df.groupby("Launch_Site").size()
+print(launch_site_missions.sort_values(ascending=False))
+
+# mission by orbit 
+print("\n10. missions by orbit")
+print("-"*50)
+orbit_missions = df.groupby("Orbit").size()
+print(orbit_missions.sort_values(ascending=False))
+
+# mission by weather 
+print("\n11. missions by weather")
+print("-"*50)
+weather_missions = df.groupby("Weather").size()
+print(weather_missions.sort_values(ascending=False))
+
+# average payload
+print("\n12. average payload")
+print("-"*50)
+print(round(df["payload_kg"].mean(), 2), "kg")
+
+
+# maximum payload
+print("\n13. maximum payload")
+print("-"*50)
+print(round(df["payload_kg"].max()), "kg")
+
+# minimum payload
+print("\n14. minimum payload")
+print("-"*50)
+print(round(df["payload_kg"].min()), "kg")
+
+# average launch cost
+print("\n15. average launch cost")
+print("-"*50)
+print("${:,.2f}".format(df["launch_cost_usd"].mean()))
+
+
+# total revenue
+print("\n16. total revenue")
+print("-"*50)
+print("${:,.2f}".format(df["revenue_usd"].sum()))
+
+# average revenue
+print("\n17. average revenue")
+print("-"*50)
+print("${:,.2f}".format(df["revenue_usd"].mean()))
+
+# average fuel used
+print("\n18. average fuel used")
+print("-"*50)
+print(round(df["fuel_used_tons"].mean(), 2), "tons")
+
+
+# average mission duration
+print("\n18. average mission duration")
+print("-"*50)
+print(round(df["mission_duration_days"].mean(), 2), "days")
+
+
+# average delay
+print("\n20. average delay")
+print("-"*50)
+print(round(df["delay_days"].mean(), 2), "days")
