@@ -120,3 +120,24 @@ print(round(df["mission_duration_days"].mean(), 2), "days")
 print("\n20. average delay")
 print("-"*50)
 print(round(df["delay_days"].mean(), 2), "days")
+
+# top 10 most expensive missions 
+print("\n21. top 10 most expensive missions")
+print("-"*50)
+
+top_cost = df.sort_values(
+    by="launch_cost_usd",
+    ascending=False
+)
+
+print(
+    top_cost[
+        [
+            "mission_ID",
+            "country",
+            "agency",
+            "rocket",
+            "launch_cost_usd"
+        ]
+    ].head(10)
+)
