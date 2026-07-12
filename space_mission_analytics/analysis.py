@@ -161,3 +161,25 @@ print(
         ]
     ].head(10)
 )
+
+
+# missions count by year 
+
+print("\n23. missions per year")
+print("-"*50)
+missions_year = df.groupby("launch_year").size()
+print(missions_year)
+
+# average crew size
+print("\n24. average crew size")
+print("-"*50)
+print(round(df["crew_size"].mean(), 2))
+
+# failure reasons
+print("\n25. failure reasons")
+print("-"*50)
+print(
+    failure["failure_reason"].value_counts()
+
+)
+print("\nmission analytics completed successfully")
