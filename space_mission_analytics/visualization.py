@@ -50,3 +50,15 @@ plt.title("rocket usage")
 plt.tight_layout()
 plt.savefig("figures/03_rocket_usage.png")
 plt.show()
+
+
+# payload distribution 
+plt.figure(figsize=(10,6))
+sns.histplot(
+    df["Payload_kg"],
+    bins=30,
+    kde=True
+)
+plt.title("payload distribution")
+plt.savefig("figures/04_payload_distribution.png")
+plt.show()
