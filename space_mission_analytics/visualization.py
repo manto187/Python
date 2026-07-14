@@ -36,3 +36,17 @@ plt.pie(
 plt.title("agency distribution")
 plt.savefig("figures/02_agency_distribution.png")
 plt.show()
+
+
+# rocket usage 
+plt.figure(figsize=(12, 6))
+rocket=df["Rocket"].value_counts()
+sns.barplot(
+    x=rocket.index,
+    y=rocket.values
+)
+plt.xticks(rotation=90)
+plt.title("rocket usage")
+plt.tight_layout()
+plt.savefig("figures/03_rocket_usage.png")
+plt.show()
