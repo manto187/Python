@@ -62,3 +62,14 @@ sns.histplot(
 plt.title("payload distribution")
 plt.savefig("figures/04_payload_distribution.png")
 plt.show()
+
+# launch cost distribution 
+plt.figure(figsize=(10,6))
+sns.histplot(
+    df["Launch_Cost_USD"],
+    bins=30,
+    kde=True
+)
+plt.title("Launch cost distribution")
+plt.savefig("figures/05_launch_cost_distribution.png")
+plt.show()
