@@ -73,3 +73,14 @@ sns.histplot(
 plt.title("Launch cost distribution")
 plt.savefig("figures/05_launch_cost_distribution.png")
 plt.show()
+
+# revenue distribution
+plt.figure(figsize=(10,6))
+sns.histplot(
+    df["Revenue_USD"],
+    bins=30,
+    kde=True
+)
+plt.title("Revenue distribution")
+plt.savefig("figures/06_revenue_distribution.png")
+plt.show()
