@@ -118,3 +118,16 @@ sns.boxplot(
 plt.title("fuel usage")
 plt.savefig("figures/09_fuel_usage.png")
 plt.show()
+
+# mission duration
+plt.figure(figsize=(10,6))
+sns.histplot(
+    df["Mission_Duration_Days"],
+    bins=25
+)
+plt.title("mission duration")
+plt.savefig("figures/10_mission_duration.png")
+plt.show()
+
+print("\nAll graphs generated successfully")
+print("saved in figures/ folder")
