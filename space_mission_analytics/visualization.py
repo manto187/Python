@@ -94,3 +94,18 @@ sns.countplot(
 plt.title("Mission Success vs Failure")
 plt.savefig("figures/07_success_failure.png")
 plt.show()
+
+# launches per year
+plt.figure(figsize=(12,6))
+launches = df.groupby("Launch_Year").size()
+plt.plot(
+    launches.index,
+    launches.values,
+    marker="o"
+)
+
+plt.title("Launches per Year")
+plt.xlabel("Launch Year")
+plt.ylabel("Missions")
+plt.savefig("figures/08_launches_per_year.png")
+plt.show()
