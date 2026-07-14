@@ -84,3 +84,13 @@ sns.histplot(
 plt.title("Revenue distribution")
 plt.savefig("figures/06_revenue_distribution.png")
 plt.show()
+
+# success vs failure
+plt.figure(figsize=(7,5))
+sns.countplot(
+    x="Mission_Status",
+    data=df
+)
+plt.title("Mission Success vs Failure")
+plt.savefig("figures/07_success_failure.png")
+plt.show()
