@@ -109,3 +109,12 @@ plt.xlabel("Launch Year")
 plt.ylabel("Missions")
 plt.savefig("figures/08_launches_per_year.png")
 plt.show()
+
+# fuel usage boxplot
+plt.figure(figsize=(8,6))
+sns.boxplot(
+    y=df["Fuel_Usage_tons"]
+)
+plt.title("fuel usage")
+plt.savefig("figures/09_fuel_usage.png")
+plt.show()
