@@ -32,3 +32,39 @@ agency_success = (
                    )
 
 print(agency_success.round(2))
+
+
+# success rate by rocket
+print("\n3. success rate by rocket")
+print("-"*60)
+
+rocket_success = (
+                   df.groupby("Rocket")["Mission_Status"]
+                   .apply(lambda x: (x=="Success").mean()*100)
+                   .sort_values(ascending=False)
+                   )
+
+print(rocket_success.round(2))
+
+# success rate by launch site 
+print("\n4. success rate by launch site")
+print("-"*60)
+
+launch_site_success = (
+                       df.groupby("Launch_Site")["Mission_Status"]
+                       .apply(lambda x: (x=="Success").mean()*100)
+                       .sort_values(ascending=False)
+                       )
+
+print(launch_site_success.round(2))
+
+# weather effect 
+print("\n5. weather effect")
+print("-"*60)
+
+weather_success = (
+                       df.groupby("Weather")["Mission_Status"]
+                       .apply(lambda x: (x=="Success").mean()*100)
+                       )
+
+print(weather_success.round(2))
