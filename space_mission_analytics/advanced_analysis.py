@@ -132,3 +132,53 @@ print(
     .mean()
     .round(2)
 )
+
+
+# delay analysis 
+print("\n12. average delay by weather")
+print("-" * 60)
+
+print(
+    df.groupby("Weather")["Delay_Days"]
+    .mean()
+    .round(2)
+)
+
+# crew size analysis
+print("\n13. average crew size by agency")
+print("-" * 60)
+
+print(
+    df.groupby("Agency")["Crew_Size"]
+    .mean()
+    .round(2)
+)
+
+# top revenue missions
+print("\n14. top 10 revenue missions")
+print("-" * 60) 
+top = df.nlargest(
+    10, 
+    "Revenue_USD"
+)
+print(
+    top[
+        [
+        "Mission_ID",
+        "Country",
+        "Agency",
+        "Rocket",
+            "Revenue_USD"
+        ]
+    ]
+)
+
+# correlation matrix 
+print("\n15. correlation matrix")
+print("-" * 60)
+numeric = df.select_dtypes(include="number")
+
+print(
+    numeric.corr().round(2)
+)
+print("\nADVANCED ANALYSIS COMPLETED SUCCESSFULLY")
