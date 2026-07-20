@@ -68,3 +68,67 @@ weather_success = (
                        )
 
 print(weather_success.round(2))
+
+# average launch cost 
+print("\n6. average launch cost")
+print("-"*60)
+
+print(
+    df.groupby("Country")["Launch_Cost_USD"]
+    .mean()
+    .sort_values(ascending=False)
+    .round(2)
+)
+
+# revenue by country 
+print("\n7. total revenue by country")
+print("-" * 60)
+
+print(
+    df.groupby("Country")["Revenue_USD"]
+    .sum()
+    .sort_values(ascending=False)
+)
+
+
+# revenue by agency 
+print("\n8. total revenue by agency")
+print("-" * 60)
+
+print(
+    df.groupby("Agency")["Revenue_USD"]
+    .sum()
+    .sort_values(ascending=False)
+)
+
+# average payload by rocket 
+print("\n9. average payload by rocket")
+print("-" * 60)
+
+print(
+    df.groupby("Rocket")["Payload_kg"]
+    .mean()
+    .sort_values(ascending=False)
+    .round(2)
+)
+
+# average fuel by rocket 
+print("\n10. average fuel used")
+print("-" * 60)
+
+print(
+    df.groupby("Rocket")["Fuel_Used_Tons"]
+    .mean()
+    .sort_values(ascending=False)
+    .round(2)
+)
+
+# average mission duration
+print("\n11. average duration by country ")
+print("-" * 60)
+
+print(
+    df.groupby("Country")["Mission_Duration_Days"]
+    .mean()
+    .round(2)
+)
