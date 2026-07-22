@@ -26,6 +26,18 @@ sns.barplot(
 plt.title("mission success rate by country")
 plt.xlabel("country")
 plt.ylabel("success rate (%)")
-plt.xticks(rotation=45)
-plt.tight_layout()
 plt.savefig("dashboard/country_success.png")
+
+
+# dashboard 2 
+rocket = df["Rocket"].value_counts()
+plt.figure(figsize=(12,6))
+
+sns.barplot(
+    x=rocket.index,
+    y=rocket.values
+)
+plt.xticks(rotation=30)
+plt.title("rocket usage")
+plt.savefig("dashboard/rocket-usage.png")
+plt.show()
