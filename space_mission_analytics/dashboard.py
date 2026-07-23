@@ -60,3 +60,29 @@ plt.title("revenue by country")
 plt.ylabel("revenue (USD)")
 plt.savefig("dashboard/revenue_country.png")
 plt.show()
+
+# dashboard 4 
+plt.figure(figsize=(10,6))
+
+sns.histoplot(
+    df["Launch_Cost_USD"],
+    bins=30,
+    kde=True
+)
+
+plt.title("launch cost distribution")
+plt.savefig("dashboard/cost_distribution.png")
+plt.show()
+
+# dashboard 5 
+plt.figure(figsize=(10,6))
+
+sns.histoplot(
+    df["Payload_kg"],
+    bins=25,
+    kde=True
+)
+
+plt.title("payload distribution")
+plt.savefig("dashboard/payload_distribution.png")
+plt.show()
