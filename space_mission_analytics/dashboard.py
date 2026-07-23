@@ -41,3 +41,22 @@ plt.xticks(rotation=30)
 plt.title("rocket usage")
 plt.savefig("dashboard/rocket-usage.png")
 plt.show()
+
+# dashboard 3 
+country_revenue = (
+    df.groupby("Country")["Revenue_USD"]
+    .sum()
+    .sort_values(ascending=False)
+)
+
+plt.figure(figsize=(10,6))
+
+sns.barplot(
+    x=country_revenue.index,
+    y=country_revenue.values
+)
+
+plt.title("revenue by country")
+plt.ylabel("revenue (USD)")
+plt.savefig("dashboard/revenue_country.png")
+plt.show()
