@@ -86,3 +86,28 @@ sns.histoplot(
 plt.title("payload distribution")
 plt.savefig("dashboard/payload_distribution.png")
 plt.show()
+
+
+# dashboard 6 
+plt.figure(figsize=(10,6))
+
+sns.boxplot(
+    y=df["Fuel_Used_Tons"]
+)
+
+plt.title("fuel usage")
+plt.savefig("dashboard/fuel_boxplot.png")
+plt.show()
+
+# dashboard 7 
+delay = df.groupby("Weather")["Delay_Days"].mean()
+plt.figure(figsize=(10,6))
+
+sns.barplot(
+    x=delay.index,
+    y=delay.values
+)
+
+plt.title("average delay by weather")
+plt.savefig("dashboard/weather_delay.png")
+plt.show()
