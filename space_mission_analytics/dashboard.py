@@ -111,3 +111,20 @@ sns.barplot(
 plt.title("average delay by weather")
 plt.savefig("dashboard/weather_delay.png")
 plt.show()
+
+# dashboard 8 
+launches = df.groupby("Launch_Year").size()
+plt.figure(figsize=(10,6))
+
+plt.plot(
+    launches.index,
+    launches.values,
+    linewidth=2
+)
+
+plt.title("launches per years")
+plt.xlabel("year")
+plt.ylabel("number of missions")
+plt.grid(True)
+plt.savefig("dashboard/launches_over_years.png")    
+plt.show()
