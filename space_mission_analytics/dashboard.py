@@ -143,3 +143,19 @@ sns.heatmap(
 plt.title("correlation matrix")
 plt.savefig("dashboard/correlation_heatmap.png")
 plt.show()
+
+# dashboard 10 
+plt.figure(figsize=(10,6))
+
+sns.scatterplot(
+    dta=df,
+    x="Payload_kg",
+    y="Revenue_USD",
+    hue="Mission_Status"
+)
+
+plt.title("payload vs revenue")
+plt.savefig("dashboard/payload_vs_revenue.png")
+plt.show()
+
+print("\n dashboard generated successfully")
