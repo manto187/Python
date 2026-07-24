@@ -114,17 +114,32 @@ plt.show()
 
 # dashboard 8 
 launches = df.groupby("Launch_Year").size()
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(12,6))
 
 plt.plot(
     launches.index,
     launches.values,
+    marker="o",
     linewidth=2
 )
 
-plt.title("launches per years")
+plt.title("launches per year")
 plt.xlabel("year")
 plt.ylabel("number of missions")
 plt.grid(True)
 plt.savefig("dashboard/launches_over_years.png")    
+plt.show()
+
+# dashboard 9 
+plt.figure(figsize=(12,8))
+corr = df.select_dtypes(include="number").corr()
+
+sns.heatmap(
+    corr,
+    annot=True,
+    cmap="coolwarm",
+    fmt=".2f"
+)
+plt.title("correlation matrix")
+plt.savefig("dashboard/correlation_heatmap.png")
 plt.show()
