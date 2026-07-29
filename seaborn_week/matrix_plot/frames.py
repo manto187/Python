@@ -48,3 +48,22 @@ res.axvline(x = 0, color = 'k',linewidth = 15)
 
 res.axvline(x = 12, color = 'k',linewidth = 15)
 plt.show()
+
+
+# using spines
+# exampel 1
+# Import libraries
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+example = sns.load_dataset("flights")
+example = example.pivot("month", "year", 
+                        "passengers")
+
+res = sns.heatmap(example, cmap = "Purples")
+
+for _, spine in res.spines.items():
+    spine.set_visible(True)
+    spine.set_linewidth(5)
+
+plt.show()
