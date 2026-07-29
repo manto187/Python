@@ -67,3 +67,22 @@ for _, spine in res.spines.items():
     spine.set_linewidth(5)
 
 plt.show()
+
+# example 2 
+# Import libraries
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+example = np.random.rand(10, 12)
+
+res = sns.heatmap(example, cmap = "Greens",
+                  linewidths = 2,
+                  linecolor = "white")
+
+for _, spine in res.spines.items():
+    spine.set_visible(True)
+    spine.set_linewidth(3)
+    spine.set_linestyle("dashdot")
+
+plt.show()
