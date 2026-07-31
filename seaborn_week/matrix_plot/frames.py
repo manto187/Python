@@ -86,3 +86,18 @@ for _, spine in res.spines.items():
     spine.set_linestyle("dashdot")
 
 plt.show()
+
+
+
+# how to increase the size of the annotations of seaborn heatmap
+
+import pandas as pd 
+import numpy as np 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
+data = pd.read_csv("bestsellers.csv")
+
+sns.heatmap(data.corr(), annot=True, annot_kws={'size':15})
+sns.heatmap(data.corr(), annot=True, annot_kws={'size': 25})
+plt.show()
