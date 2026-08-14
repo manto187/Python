@@ -17,3 +17,13 @@ seaborn.swarmplot(x="timepoint",
                   y="signal",
                   hue="region",
                   data=fmri)
+
+
+
+# example 3 
+import seaborn
+
+seaborn.set(style="whitegrid")
+tips = seaborn.load_dataset("tips")
+
+seaborn.swarmplot(x=tips["total_bill"])
