@@ -54,3 +54,13 @@ seaborn.set(style="whitegrid")
 tips = seaborn.load_dataset("tips")
 
 seaborn.swarmplot(x="day", y="total_bill", data=tips, linewidth=2)
+
+# example 6
+import seaborn 
+seaborn.set(style="whitegrid")
+
+tips = seaborn.load_dataset("tips")
+
+seaborn.swarmplot(x="day", y="total_bill", hue="smoker",
+                  data=tips, palette="Set2", size=20, marker="D",
+                  edgecolor="gray", alpha=.25)
