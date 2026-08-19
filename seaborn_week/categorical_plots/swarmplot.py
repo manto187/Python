@@ -75,7 +75,7 @@ seaborn.swarmplot(x="time", y="tip",
                   data=tips, order=["Dinner", "Lunch"])
 
 
-# example 7
+# example 8
 import seaborn 
 seaborn.set(style="whitegrid")
 
@@ -83,3 +83,13 @@ tips = seaborn.load_dataset("tips")
 
 seaborn.swarmplot(x="time", y="tips", data=tips,
                   hue='smoker', size=10)
+
+
+ # example 9
+import seaborn 
+seaborn.set(style="whitegrid")
+
+tips = seaborn.load_dataset("tips")
+
+seaborn.swarmplot(x='day', y='total_bill', data=tips,
+                  hue='time', palette='pastel')
