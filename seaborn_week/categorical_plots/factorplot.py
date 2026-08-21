@@ -7,3 +7,15 @@ df = pd.read_csv('Tips.csv')
 
 sns.factorplot(x='size', y='tips', data=df)
 plt.show()
+
+
+# example 2 
+import pandas as pd 
+import seaborn as sns 
+import matplotlib.pyplot as plt 
+
+df = pd.read_csv('Tips.csv')
+
+sns.factorplot(x='size', y='tips',
+               hue='sex', data=df)
+plt.show()
