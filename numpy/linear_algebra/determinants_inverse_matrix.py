@@ -19,3 +19,11 @@ A = np.array([[6,1,1],
               [4,-2,5],
               [2,8,7]])
 print(np.linalg.inv(A))
+
+# example 2 
+import numpy as np 
+A = np.array([[6,1,1,3],
+              [4,-2,5,1],
+              [2,8,7,6],
+              [3,1,9,7]])
+print(np.linalg.inv(A))
