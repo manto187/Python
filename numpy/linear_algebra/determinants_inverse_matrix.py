@@ -27,3 +27,10 @@ A = np.array([[6,1,1,3],
               [2,8,7,6],
               [3,1,9,7]])
 print(np.linalg.inv(A))
+
+
+# example 3 
+import numpy as np 
+A = np.array([[[1.,2.],[3.,4.]],
+              [[1,3], [3,5]]])
+print(np.linalg.inv(A))
