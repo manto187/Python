@@ -11,3 +11,11 @@ import numpy as np
 A = np.array([[1,2],[3,4]])
 result = np.linalg.det(A)
 print("determinant of A =", result)
+
+# inverse of a matrix
+# example 1
+import numpy as np 
+A = np.array([[6,1,1],
+              [4,-2,5],
+              [2,8,7]])
+print(np.linalg.inv(A))
